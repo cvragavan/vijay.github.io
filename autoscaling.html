@@ -64,14 +64,11 @@
 	<div class="container">
 	
 	<h3 class="widget-title">AWS High Availability & Fault Tolerance of the applications using aws EC2 auto scaling and ELB.</h3>
-<a href="assets/images/auto.jpg" class="gal"><img src="assets/images/auto.jpg" alt=""></a>
-<br>
-<br>	
-<p><strong>Step 1:</strong> To create a auto scaling group, Go to auto scaling group tab on EC2 console and Click Create Auto Scaling group.</p>
-<a href="assets\images\aws\Autoscaling\image001.jpg" class="gal"><img src="assets\images\aws\Autoscaling\image001.jpg" alt=""></a>
-<br>
-<br>
-<p><strong>Step 2:</strong> Here you can see the Step 1 and Step 2, first need to create launch configuration and then create a Auto Scaling group using launch configuration. Click Start.<br><strong> Note:</strong> Launch configuration is that specifies the type of EC2 instance such as AMI ID, instance type,EBS,SG,key paire. </p>
+<a href="assets/images/auto.jpg" class="gal"><img src="assets/images/auto.jpg" alt=""></a><br>
+	
+<p><strong>Step 1:</strong> To create a auto scaling group, go to EC2 auto scaling group console and Click Create Auto Scaling group.</p>
+<a href="assets\images\aws\Autoscaling\image001.jpg" class="gal"><img src="assets\images\aws\Autoscaling\image001.jpg" alt=""></a><br>
+<p><strong>Step 2:</strong> Here you can see the Step 1 and Step 2, first need to create launch configuration and then create a Auto Scaling group using launch configuration. Click Start<strong>Note:</strong> Launch configuration is that specifies the type of EC2 instance such as AMI ID, instance type,EBS,SG,key paire. </p>
 <a href="assets/images/aws/Autoscaling/image002.jpg" class="gal"><img src="assets/images/aws/Autoscaling/image002.jpg" alt=""></a><br>
 <p><strong>Step 3:</strong> Choose the AMI.</p>
 <a href="assets/images/aws/Autoscaling/image003.jpg" class="gal"><img src="assets/images/aws/Autoscaling/image003.jpg" alt=""></a><br>
@@ -79,59 +76,41 @@
 <a href="assets/images/aws/Autoscaling/image004.jpg" class="gal"><img src="assets/images/aws/Autoscaling/image004.jpg" alt=""></a><br>
 <p><strong>Step 5:</strong> Setup the configuration details such as Name,Role and user data. Click Next</p>
 <a href="assets/images/aws/Autoscaling/image005.jpg" class="gal"><img src="assets/images/aws/Autoscaling/image005.jpg" alt=""></a><br>
-<p><strong>Step 6:</strong> Click Next.</p>
+<p><strong>Step 6:</strong>Click Next.</p>
 <a href="assets/images/aws/Autoscaling/image006.jpg" class="gal"><img src="assets/images/aws/Autoscaling/image006.jpg" alt=""></a><br>
-<p><strong>Step 7:</strong> Choose the Security Group based your requirement, as of now I opened all the ports and Click Review.</p>
+<p><strong>Step 7:</strong> Choose the Security Group. Click Review.</p>
 <a href="assets/images/aws/Autoscaling/image007.jpg" class="gal"><img src="assets/images/aws/Autoscaling/image007.jpg" alt=""></a><br>
 <p><strong>Step 8:</strong> You can review and Click Create Launch Configuration.</p>
 <a href="assets/images/aws/Autoscaling/image008.jpg" class="gal"><img src="assets/images/aws/Autoscaling/image008.jpg" alt=""></a><br>
 <p><strong>Step 9:</strong> Choose the Key Pair and Click Create Launch Configuration to create it.</p>
-<a href="assets/images/aws/Autoscaling/image009.jpg" class="gal"><img src="assets/images/aws/Autoscaling/image009.jpg" alt=""></a>
-<br>
-<br>
-<p><strong>Step 10:</strong> Now you can create a Auto Scaling group using this launch configuration.</p>
-<a href="assets/images/aws/Autoscaling/image010.jpg" class="gal"><img src="assets/images/aws/Autoscaling/image010.jpg" alt=""></a>
-<br>
-<br>
+<a href="assets/images/aws/Autoscaling/image009.jpg" class="gal"><img src="assets/images/aws/Autoscaling/image009.jpg" alt=""></a><br>
+<p><strong>Step 10:</strong> Now Create a Auto Scaling group using this launch configuration.</p>
+<a href="assets/images/aws/Autoscaling/image010.jpg" class="gal"><img src="assets/images/aws/Autoscaling/image010.jpg" alt=""></a><br>
 <p><strong>Step 11:</strong> Provide the configuration details such as group name, number of instances and network configurations.</p>
-<a href="assets/images/aws/Autoscaling/image011.jpg" class="gal"><img src="assets/images/aws/Autoscaling/image011.jpg" alt=""></a>
-<br>
-<br>
-<p><strong>Step 12:</strong> Under the Advanced Details we can choose the Load Balancer if you needed. Click Next.</p>
+<a href="assets/images/aws/Autoscaling/image011.jpg" class="gal"><img src="assets/images/aws/Autoscaling/image011.jpg" alt=""></a><br>
+<p><strong>Step 12:</strong> Under the Advanced Details we can choose the Load Balancer. Click Next.</p>
 <a href="assets/images/aws/Autoscaling/image012.jpg" class="gal"><img src="assets/images/aws/Autoscaling/image012.jpg" alt=""></a><br>
  <p><strong>Step 13:</strong> To Configure scaling policies, select the second options to detailed policies and you can mention the initial and maximum size of group and click Add new alerm.</p>
 <a href="assets/images/aws/Autoscaling/image013.jpg" class="gal"><img src="assets/images/aws/Autoscaling/image013.jpg" alt=""></a>
 <p><strong>Step 14:</strong> We can configure the alerm based on our requirement. Click Create Alerm.</p>
 <a href="assets/images/aws/Autoscaling/image014.jpg" class="gal"><img src="assets/images/aws/Autoscaling/image014.jpg" alt=""></a>
-<br>
-<br>
-<p><strong>Step 15:</strong> Once configured the Scaling policies Click Next to configure the notifications.</p>
+<h3 class="widget-title">Step 15:</h3>
 <a href="assets/images/aws/Autoscaling/image015.jpg" class="gal"><img src="assets/images/aws/Autoscaling/image015.jpg" alt=""></a>
-<p><strong>Step 16:</strong> As per the below screenshot we can configure the notification emails whenever instances are failed or stopped or terminated. Click Next.</p>
+<h3 class="widget-title">Step 16:</h3>
 <a href="assets/images/aws/Autoscaling/image016.jpg" class="gal"><img src="assets/images/aws/Autoscaling/image016.jpg" alt=""></a>	
-<p><strong>Step 17:</strong> You can give the tags and Click Review.</p>
+<h3 class="widget-title">Step 17:</h3>
 <a href="assets/images/aws/Autoscaling/image017.jpg" class="gal"><img src="assets/images/aws/Autoscaling/image017.jpg" alt=""></a>
-<p><strong>Step 18:</strong> Review and Create Auto Scaling group.</p>
+<h3 class="widget-title">Step 18:</h3>
 <a href="assets/images/aws/Autoscaling/image018.jpg" class="gal"><img src="assets/images/aws/Autoscaling/image018.jpg" alt=""></a>
-<br>
-<br>
-<p><strong>Step 19:</strong> Click View your autos caling groups.</p>
+<h3 class="widget-title">Step 19:</h3>
 <a href="assets/images/aws/Autoscaling/image019.jpg" class="gal"><img src="assets/images/aws/Autoscaling/image019.jpg" alt=""></a>
-<br>
-<br>
-<p><strong>Step 20:</strong> See the below Auto Scaling Group has been created and you can find the details, etc. and instance will be launching.</p>
+<h3 class="widget-title">Step 20:</h3>
 <a href="assets/images/aws/Autoscaling/image020.jpg" class="gal"><img src="assets/images/aws/Autoscaling/image020.jpg" alt=""></a>
-<br>
-<br>
-<p><strong>Step 21:</strong> Go to Instances tab and find it as MyASG instance is currently running.</p>
+<h3 class="widget-title">Step 21:</h3>
 <a href="assets/images/aws/Autoscaling/image021.jpg" class="gal"><img src="assets/images/aws/Autoscaling/image021.jpg" alt=""></a>
-<br>
-<br>
-<p><strong>Step 22:</strong> Go to load balancer tab on EC2 console and Copy the DNS name(URL) and past in your browser. </p>
+<h3 class="widget-title">Step 22:</h3>
 <a href="assets/images/aws/Autoscaling/image022.jpg" class="gal"><img src="assets/images/aws/Autoscaling/image022.jpg" alt=""></a>
-<br>
-<br>
-<p><strong>Step 23:</strong> Make sure the URL is working fine.</p>
+<h3 class="widget-title">Step 23:</h3>
 <a href="assets/images/aws/Autoscaling/image023.jpg" class="gal"><img src="assets/images/aws/Autoscaling/image023.jpg" alt=""></a>
 
 	

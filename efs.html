@@ -141,34 +141,23 @@
 <a href="assets/images/aws/ebs/image005.jpg" class="gal"><img src="assets/images/aws/ebs/image005.jpg" alt=""></a>
 <br>
 <br>
-<p><strong>Step 5:</strong> After attached your EBS volume to your instance you can see the volume as xvdf in your EC2.<br>
-Note: Before formating your volume you need to check if the volume has any data using the following command,<br>
-<strong>sudo file -s /dev/xvdf</strong><br>
-If the above command output shows “/dev/xvdf: data”, it means your volume is empty.</p>
+<p><strong>Step 5:</strong> After attached your EBS volume you can see the volume as xvdf in your EC2.</p>
 <a href="assets/images/aws/ebs/image006.jpg" class="gal"><img src="assets/images/aws/ebs/image006.jpg" alt=""></a>
 <br>
 <br>
-<p><strong>Step 6:</strong> Now Format the volume to ext4 file system using the following command,<br>
-<strong>sudo mkfs -t ext4 /dev/xvdf</strong>.</p>
+<p><strong>Step 6:</strong> Now Format the volume by following commands.</p>
 <a href="assets/images/aws/ebs/image007.jpg" class="gal"><img src="assets/images/aws/ebs/image007.jpg" alt=""></a>
 <br>
 <br>
-<p><strong>Step 7:</strong> Create a directory of your choice to mount our new ext4 volume in your instance. I am using the name “data” <br>
-<strong>sudo mkdir /data</strong>
-Now mounted your volume to data drive using following commands<br>
-<strong>sudo mount /dev/xvdf /newvolume/</strong> <br>.</p>
+<p><strong>Step 7:</strong> Mount the volume by following commands and making an EBS volume available in your EC2.</p>
 <a href="assets/images/aws/ebs/image008.jpg" class="gal"><img src="assets/images/aws/ebs/image008.jpg" alt=""></a>
 <br>
 <br>
-<p><strong>Step 8:</strong> Now See below volume has been attached successfully in your EC2 instance.</p>
+<p><strong>Step 8:</strong> Now mounted your volume and you can see that attached in data drive in the EC2.</p>
 <a href="assets/images/aws/ebs/image009.jpg" class="gal"><img src="assets/images/aws/ebs/image009.jpg" alt=""></a>
 <br>
 <br>
-<h3 class="widget-title">EBS Automount On Reboot</h3>
-<br>
-<br>
-<p><strong>Step 9:</strong> By default on every reboot the  EBS volumes other than root volume will get unmounted. To enable automount, you need to make an entry in the <strong>/etc/fstab</strong> file. Open /etc/fstab file and make an entry in the following format<br>
-</p>
+<p><strong>Step 9:</strong> To mount an attached EBS volume on every system reboot, add an entry for the device to the /etc/fstab file.</p>
 <a href="assets/images/aws/ebs/image010.jpg" class="gal"><img src="assets/images/aws/ebs/image010.jpg" alt=""></a>
 <br>
 <br>

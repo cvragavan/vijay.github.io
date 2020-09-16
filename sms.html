@@ -26,7 +26,7 @@
 		<h1 id="logo" class="text-center">
 			<img class="img-circle" src="assets/images/aws1.jpg" alt="">
 			<span class="title">Vijayaragavan C</span>
-			<span class="tagline">AWS - DevOps - Linux</span>
+			<span class="tagline">AWS - Windows - Linux</span>
 			<span class="tagline"></span>
 		</h1>
 	</div>
@@ -108,61 +108,57 @@
 <p><strong>Step 19:</strong>Give the Role Name. Click Create role.</p>
 <a href="assets/images/aws/sms/image019.jpg" class="gal"><img src="assets/images/aws/sms/image019.jpg" alt=""></a>
 <p><strong>Step 20:</strong>Now created the service role as vmimport to get the access for vm import/export.</p>
-<a href="assets/images/aws/sms/image020.jpg" class="gal"><img src="assets/images/aws/sms/image020.jpg" alt=""></a><br>
-<p><strong>Note:</strong> Just open vmimport role and Click Trust relationships then Edit trust relationships and add the below policy as per the screen below. and attach to this role to ec2 instance where you are execute the import task.</p>
-<a href="assets/images/aws/sms/image0021.jpg" class="gal"><img src="assets/images/aws/sms/image0021.jpg" alt=""></a>
-<a href="assets/images/aws/sms/image0022.jpg" class="gal"><img src="assets/images/aws/sms/image0022.jpg" alt=""></a>
-<br><br>
+<a href="assets/images/aws/sms/image020.jpg" class="gal"><img src="assets/images/aws/sms/image020.jpg" alt=""></a>
 <p><strong>Step 21:</strong>Go to S3 on AWS console and create a bucket where the image exported from Vmware as demonstarted will be stored.</p>
-<a href="assets/images/aws/sms/image021.jpg" class="gal"><img src="assets/images/aws/sms/image021.jpg" alt=""></a><br><br>
+<a href="assets/images/aws/sms/image021.jpg" class="gal"><img src="assets/images/aws/sms/image021.jpg" alt=""></a>
 <p><strong>Step 22:</strong>Click Create Bucket.</p>
-<a href="assets/images/aws/sms/image022.jpg" class="gal"><img src="assets/images/aws/sms/image022.jpg" alt=""></a><br><br>
+<a href="assets/images/aws/sms/image022.jpg" class="gal"><img src="assets/images/aws/sms/image022.jpg" alt=""></a>
 <p><strong>Step 23:</strong>Mention the bucket name and choose the region. Click Create.</p>
-<a href="assets/images/aws/sms/image023.jpg" class="gal"><img src="assets/images/aws/sms/image023.jpg" alt=""></a><br><br>
+<a href="assets/images/aws/sms/image023.jpg" class="gal"><img src="assets/images/aws/sms/image023.jpg" alt=""></a>
 <p><strong>Step 24:</strong>You can find the below bucket has been created as vmimportexport-bkt.</p>
-<a href="assets/images/aws/sms/image024.jpg" class="gal"><img src="assets/images/aws/sms/image024.jpg" alt=""></a><br><br>
+<a href="assets/images/aws/sms/image024.jpg" class="gal"><img src="assets/images/aws/sms/image024.jpg" alt=""></a>
 <p><strong>Step 25:</strong>Now upload the exported vmdk image of our VM to the bucket.Click Upload.</p>
-<a href="assets/images/aws/sms/image025.jpg" class="gal"><img src="assets/images/aws/sms/image025.jpg" alt=""></a><br><br>
+<a href="assets/images/aws/sms/image025.jpg" class="gal"><img src="assets/images/aws/sms/image025.jpg" alt=""></a>
 <p><strong>Step 26:</strong>Click Add files.</p>
-<a href="assets/images/aws/sms/image026.jpg" class="gal"><img src="assets/images/aws/sms/image026.jpg" alt=""></a><br><br>
+<a href="assets/images/aws/sms/image026.jpg" class="gal"><img src="assets/images/aws/sms/image026.jpg" alt=""></a>
 <p><strong>Step 27:</strong>Choose the vmdk image file as per the below. Click Open.</p>
-<a href="assets/images/aws/sms/image027.jpg" class="gal"><img src="assets/images/aws/sms/image027.jpg" alt=""></a><br><br>
+<a href="assets/images/aws/sms/image027.jpg" class="gal"><img src="assets/images/aws/sms/image027.jpg" alt=""></a>
 <p><strong>Step 28:</strong>Click Upload.</p>
-<a href="assets/images/aws/sms/image028.jpg" class="gal"><img src="assets/images/aws/sms/image028.jpg" alt=""></a><br><br>
+<a href="assets/images/aws/sms/image028.jpg" class="gal"><img src="assets/images/aws/sms/image028.jpg" alt=""></a>
 <p><strong>Step 29:</strong>Now successfully uploaded the VM image file.</p>
-<a href="assets/images/aws/sms/image029.jpg" class="gal"><img src="assets/images/aws/sms/image029.jpg" alt=""></a><br><br>
+<a href="assets/images/aws/sms/image029.jpg" class="gal"><img src="assets/images/aws/sms/image029.jpg" alt=""></a>
 <p><strong>Step 30:</strong>After you upload your VM image file to Amazon S3, you can use the AWS CLI to import the image. before that need to create the Tasks as per the below and execute the task to import the image from S3 bucket. So now i created as containers.json file.</p>
-<a href="assets/images/aws/sms/image030.jpg" class="gal"><img src="assets/images/aws/sms/image030.jpg" alt=""></a><br><br>
-<p><strong>Step 31:</strong>Executed the containers.json file by following command via CLI,<br>aws ec2 import-image --description "Windows 2008 image" --disk-containers file://containers.json  --region us-west-2 --profile vijay</br></p>
-<a href="assets/images/aws/sms/image031.jpg" class="gal"><img src="assets/images/aws/sms/image031.jpg" alt=""></a><br><br>
+<a href="assets/images/aws/sms/image030.jpg" class="gal"><img src="assets/images/aws/sms/image030.jpg" alt=""></a>
+<p><strong>Step 31:</strong>Executed the containers.json file by following command via CLI,<br>aws sms import-image --description "Windows 2008 image" --disk-containers file://containers.json  --region us-west-2 --profile vijay</br></p>
+<a href="assets/images/aws/sms/image031.jpg" class="gal"><img src="assets/images/aws/sms/image031.jpg" alt=""></a>
 <p><strong>Step 32:</strong>After executed the command, you can find the below status of VM import.</p>
-<a href="assets/images/aws/sms/image032.jpg" class="gal"><img src="assets/images/aws/sms/image032.jpg" alt=""></a><br><br>
-<p><strong>Step 33:</strong>Also you will check the status by following commands,<br>aws ec2 describe-import-image-tasks --import-task-ids import-ami-04c76cc67a8a52ea4 --region us-west-2 --profile vijay.</br></p>
-<a href="assets/images/aws/sms/image033.jpg" class="gal"><img src="assets/images/aws/sms/image033.jpg" alt=""></a><br><br>
+<a href="assets/images/aws/sms/image032.jpg" class="gal"><img src="assets/images/aws/sms/image032.jpg" alt=""></a>
+<p><strong>Step 33:</strong>Also you will check the status by following commands,<br>aws sms describe-import-image-tasks --import-task-ids import-ami-04c76cc67a8a52ea4 --region us-west-2 --profile vijay.</br></p>
+<a href="assets/images/aws/sms/image033.jpg" class="gal"><img src="assets/images/aws/sms/image033.jpg" alt=""></a>
 <p><strong>Step 34:</strong>Once created the AMI, you can launch the Instance by clicking Launch.</p>
-<a href="assets/images/aws/sms/image034.jpg" class="gal"><img src="assets/images/aws/sms/image034.jpg" alt=""></a><br><br>
+<a href="assets/images/aws/sms/image034.jpg" class="gal"><img src="assets/images/aws/sms/image034.jpg" alt=""></a>
 <p><strong>Step 35:</strong>Click Next.</p>
-<a href="assets/images/aws/sms/image035.jpg" class="gal"><img src="assets/images/aws/sms/image035.jpg" alt=""></a><br><br>
+<a href="assets/images/aws/sms/image035.jpg" class="gal"><img src="assets/images/aws/sms/image035.jpg" alt=""></a>
 <p><strong>Step 36:</strong>Configure the VPC and Subnet.Click Next.</p>
-<a href="assets/images/aws/sms/image036.jpg" class="gal"><img src="assets/images/aws/sms/image036.jpg" alt=""></a><br><br>
+<a href="assets/images/aws/sms/image036.jpg" class="gal"><img src="assets/images/aws/sms/image036.jpg" alt=""></a>
 <p><strong>Step 37:</strong>Click Next.</p>
-<a href="assets/images/aws/sms/image037.jpg" class="gal"><img src="assets/images/aws/sms/image037.jpg" alt=""></a><br><br>
+<a href="assets/images/aws/sms/image037.jpg" class="gal"><img src="assets/images/aws/sms/image037.jpg" alt=""></a>
 <p><strong>Step 38:</strong>Click Next.</p>
-<a href="assets/images/aws/sms/image038.jpg" class="gal"><img src="assets/images/aws/sms/image038.jpg" alt=""></a><br><br>
+<a href="assets/images/aws/sms/image038.jpg" class="gal"><img src="assets/images/aws/sms/image038.jpg" alt=""></a>
 <p><strong>Step 39:</strong>Choose the Security Group.Click Review and Launch.</p>
-<a href="assets/images/aws/sms/image039.jpg" class="gal"><img src="assets/images/aws/sms/image039.jpg" alt=""></a><br><br>
+<a href="assets/images/aws/sms/image039.jpg" class="gal"><img src="assets/images/aws/sms/image039.jpg" alt=""></a>
 <p><strong>Step 40:</strong>Click Launch.</p>
-<a href="assets/images/aws/sms/image040.jpg" class="gal"><img src="assets/images/aws/sms/image040.jpg" alt=""></a><br><br>
+<a href="assets/images/aws/sms/image040.jpg" class="gal"><img src="assets/images/aws/sms/image040.jpg" alt=""></a>
 <p><strong>Step 41:</strong>Choose the key paire and Click Launch Instance.</p>
-<a href="assets/images/aws/sms/image041.jpg" class="gal"><img src="assets/images/aws/sms/image041.jpg" alt=""></a><br><br>
+<a href="assets/images/aws/sms/image041.jpg" class="gal"><img src="assets/images/aws/sms/image041.jpg" alt=""></a>
 <p><strong>Step 42:</strong>Your VM image has been launched successfully, copy the public IP and connect it by RDP.</p>
-<a href="assets/images/aws/sms/image042.jpg" class="gal"><img src="assets/images/aws/sms/image042.jpg" alt=""></a><br><br>
+<a href="assets/images/aws/sms/image042.jpg" class="gal"><img src="assets/images/aws/sms/image042.jpg" alt=""></a>
 <p><strong>Step 43:</strong>You can see the below as i logged in to server.</p>
-<a href="assets/images/aws/sms/image043.jpg" class="gal"><img src="assets/images/aws/sms/image043.jpg" alt=""></a><br><br>
+<a href="assets/images/aws/sms/image043.jpg" class="gal"><img src="assets/images/aws/sms/image043.jpg" alt=""></a>
 <p><strong>Step 44:</strong>See the below same website running on the server.</p>
-<a href="assets/images/aws/sms/image044.jpg" class="gal"><img src="assets/images/aws/sms/image044.jpg" alt=""></a><br><br>
+<a href="assets/images/aws/sms/image044.jpg" class="gal"><img src="assets/images/aws/sms/image044.jpg" alt=""></a>
 <p><strong>Step 45:</strong>The website is working properly on the same VM.</p>
-<a href="assets/images/aws/sms/image045.jpg" class="gal"><img src="assets/images/aws/sms/image045.jpg" alt=""></a><br><br>
+<a href="assets/images/aws/sms/image045.jpg" class="gal"><img src="assets/images/aws/sms/image045.jpg" alt=""></a>
 	
 	
 	
